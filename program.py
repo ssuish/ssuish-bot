@@ -1,17 +1,14 @@
-from asyncio import proactor_events
-from pydoc import cli
 import discord as dc
 import logging as log
 from private import Secret
 
-tk = Secret().get_token()
+tk = Secret.TOKEN
 client = dc.Client()
 
 # client.events
 @client.event
 async def on_ready():
     print('Logged in as {0.user}' .format(client))
-    
 
 @client.event
 async def on_message(message):
