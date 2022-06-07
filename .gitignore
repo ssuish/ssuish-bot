@@ -13,5 +13,5 @@ pip-selfcheck.json
 *Github/
 private.py
 discord.log
-__pycache__/private.cpython-310.pyc
+*__pycache__/
 Run.ps1
