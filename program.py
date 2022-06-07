@@ -4,6 +4,8 @@ from private import Secret
 
 tk = Secret.TOKEN
 client = dc.Client()
+prefix = "s!"
+
 
 # client.events
 @client.event
@@ -14,12 +16,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-    if message.content.startswith('!hello'):
+    if message.content.startswith(prefix + 'hello'):
         await message.channel.send('Hello!')
 
 # bot events
