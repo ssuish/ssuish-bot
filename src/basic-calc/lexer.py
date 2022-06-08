@@ -7,6 +7,7 @@ DIGITS = '0123456789'
 class Lexer:
     def __init__(self, text):
         self.text = iter(text)
+        self.advance()
     
     def advance(self):
         try: 

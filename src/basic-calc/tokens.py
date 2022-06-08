@@ -1,8 +1,14 @@
 from dataclasses import dataclass
 from enum import Enum
 
+"""Tokens
+
+    This module defines the tokens used in the basic calculator.
+    NUMBER: returns the number as a float.
+"""
+
 class TokenType(Enum):
-    NUMBER = 0
+    NUMBER = 0 
     PLUS = 1
     MINUS = 2
     MULTIPLY = 3
