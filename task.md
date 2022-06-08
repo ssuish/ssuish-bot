@@ -2,6 +2,7 @@
 - Parser
 - Interpreter
 - Unit Tests
+- Discord Integration
 
 ### In Progress
 - Math Lexer
