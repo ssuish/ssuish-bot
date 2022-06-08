@@ -35,8 +35,8 @@ class SsuishLogs:
 
 class Main:
     def __init__(self):
-        SsuishLogs.log_setup()
         Main.main()
+        SsuishLogs.log_setup()
         SsuishEvents.on_ready()
         SsuishEvents.on_message()
         SsuishEvents.on_guild_join()
