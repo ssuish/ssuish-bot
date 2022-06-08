@@ -1,6 +1,5 @@
 from lexer import Lexer
 
-
 while True:
     text = input("ssuish > ")
     lexer = Lexer(text)
