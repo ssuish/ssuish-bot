@@ -1,6 +1,6 @@
 import discord as dc
 import logging as log
-from owner import Secret
+from private import Secret
 
 client = dc.Client()
 
