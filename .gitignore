@@ -15,3 +15,4 @@ discord.log
 *__pycache__/
 Run.ps1
 private.py
+*temp/
