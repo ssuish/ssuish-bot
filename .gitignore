@@ -16,3 +16,4 @@ discord.log
 Run.ps1
 token.py
 *temp/
+/env
