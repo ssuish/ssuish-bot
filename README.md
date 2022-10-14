@@ -1,11 +1,9 @@
 # ssuish-bot
   
-Experimental discord bot, do not use in your server without permission.
-Ssuish-bot is not purposely made for general use, and doesn't function the way most discord bots are made.  
+## Description
 
-For contribution or any issue pls. contact me on discord: suisoh#6260
+This is a general purpose bot created for me to learn basics of Discord API. It is written in Python and uses discord.py library.
 
-Features:
-- Basic Interpreter (Experimental)  
-- Basic Calculator (Experimental)   
-- Turing Complete (Experimental)  
+## Commands
+
+- Prefix: `--`

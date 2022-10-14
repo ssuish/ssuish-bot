@@ -1,11 +1,10 @@
 import discord as dc
-import logging as log
-from botinfo.token import Secret
+from token import token
 
 client = dc.Client()
 
 class SsuishEvents:    
-    prefix = "s!"
+    prefix = "--"
 
     @client.event
     async def on_ready():
@@ -25,25 +24,15 @@ class SsuishEvents:
         for guild in client.guilds:
             await print(guild.name)
 
-class SsuishLogs:
-    def log_setup():
-        logger = log.getLogger('discord')
-        logger.setLevel(log.DEBUG)
-        handler = log.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
-        handler.setFormatter(log.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
-        logger.addHandler(handler)
-
 class Main:
     def __init__(self):
         Main.main()
-        SsuishLogs.log_setup()
         SsuishEvents.on_ready()
         SsuishEvents.on_message()
         SsuishEvents.on_guild_join()
     
     def main():
-        tk = Secret.TOKEN
-        client.run(tk)
+        client.run(token())
     
 if __name__ == '__main__':
     Main.main()
