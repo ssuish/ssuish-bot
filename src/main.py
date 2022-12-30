@@ -1,5 +1,17 @@
-def Main():
-    pass
+import Discord
 
-if __name__ == '__main__':
-    Main()
+client = Discord.Client()
+
+@client.event
+async def on_ready():
+  print("We log in as ", client)
+
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return
+
+  if message.content.startswith("$hello"):
+    await message.channel.send("Hi")
+
+client.run  
