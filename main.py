@@ -1,13 +1,13 @@
 import discord
 import os
+from private import token
 
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
 
 @client.event
-async def on_ready(message):
+async def on_ready():
     print("We log in as ", client)
-    await message.channel.send("I have logged in on the server")
 
 @client.event
 async def on_message(message):
@@ -17,13 +17,4 @@ async def on_message(message):
     if message.content.startswith("$hello"):
         await message.channel.send("Hi")
 
-
-def get_token():
-    try:
-        token = os.getenv("TOKEN")
-        return token
-    except:
-        print("Token not found")
-
-
-client.run(get_token())
+client.run(token.get_token())
