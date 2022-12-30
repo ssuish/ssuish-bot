@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -14,4 +15,11 @@ async def on_message(message):
   if message.content.startswith("$hello"):
     await message.channel.send("Hi")
 
-client.run  
+def get_token():
+    try:
+        token = os.getenv("TOKEN")
+        return token
+    except:
+        print("Token not found")
+
+client.run(get_token())  
