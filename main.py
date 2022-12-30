@@ -1,22 +1,18 @@
 import discord
-import os
 from private import token
 
-intents = discord.Intents.default()
-intents.message_content = True
+client = discord.Bot()
 
-client = discord.Client(intents=intents)
+# Create a slash command bot
+@client.slash_command(guild_ids=[736241812385038461])
+async def hello(ctx):
+    await ctx.respond("Hello!")
 
 @client.event
 async def on_ready():
     print(f'We have logged in as {client.user}')
-
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+    print(f'{client.user} is connected to the following guilds:\n')
+    for guild in client.guilds:
+        print(f'{guild.name}(id: {guild.id})')
 
 client.run(token.get_token())
