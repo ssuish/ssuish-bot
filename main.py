@@ -7,7 +7,7 @@ client = discord.Client(intents=intents)
 @client.event
 async def on_ready(message):
     print("We log in as ", client)
-    await message.channel.send("I have logged in as ", str(client), " and I am ready to go")
+    await message.channel.send("I have logged in on the server")
 
 @client.event
 async def on_message(message):
