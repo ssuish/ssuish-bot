@@ -1,6 +1,6 @@
-import Discord
+import discord
 
-client = Discord.Client()
+client = discord.Client()
 
 @client.event
 async def on_ready():
