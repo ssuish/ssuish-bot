@@ -3,10 +3,10 @@ from private import token
 
 client = discord.Bot()
 
-# Create a slash command bot
-@client.slash_command(guild_ids=[736241812385038461])
-async def hello(ctx):
-    await ctx.respond("Hello!")
+# Create a slash command
+@client.slash_command(name='test', description='A test command', guild_ids=[530737169682399252, 736241812385038461])
+async def test(ctx):
+    await ctx.send('Hello World!')
 
 @client.event
 async def on_ready():
